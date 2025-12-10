@@ -10,7 +10,10 @@
     <div class="main-container">
       <div class="card-container">
         <div class="profile-image">
-          <img src="Images/tumblr_mw9docThmR1qawynxo1_500.png" alt="Hartchorde Castle Crest" />
+          <img
+            src="Images/tumblr_mw9docThmR1qawynxo1_500.png"
+            alt="Hartchorde Castle Crest"
+          />
         </div>
 
         <h1 class="title">The Barony of Chastings</h1>
@@ -22,25 +25,15 @@
           seeking residents, artisans, and adventurers to help forge the next
           chapter of a proud lineage.
         </p>
-
-        <div class="button-group">
-          <a href="staff.html">
-            <button class="card-button">Hartchorde Staff</button>
-          </a>
-
-          <a href="valley.html">
-            <button class="card-button">Valley Info</button>
-          </a>
-
-          <a href="calendar.html">
-            <button class="card-button">Valley Calendar</button>
-          </a>
-
-          <a href="join.html">
-            <button class="card-button">Join Guild</button>
-          </a>
-        </div>
+        <div id="navbar"></div>
       </div>
     </div>
+    <script>
+      fetch("nav.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar").innerHTML = html;
+        });
+    </script>
   </body>
 </html>
