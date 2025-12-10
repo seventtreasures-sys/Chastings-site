@@ -75,6 +75,7 @@ p, li, td, th {
     position: relative;
     min-height: 100vh;
     width: 100vw;
+    overflow-y: auto;
 
 
     display: flex;
@@ -113,6 +114,7 @@ p, li, td, th {
     padding: 40px;
     padding-top: 100px;
     padding-bottom: 160px;
+    overflow: visible;
 
     background-color: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(8px);
@@ -190,13 +192,13 @@ p, li, td, th {
 /* -------------------------------------------------------
    BUTTON GROUP
 ------------------------------------------------------- */
-.button-group {
+.navbar {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.button-group a {
+.navbar a {
     text-decoration: none;
     display: inline-block;
 }
@@ -230,6 +232,8 @@ p, li, td, th {
     position: absolute;
     top: 30px;
     left: 30px;
+    display: inline-block;
+    margin: 2rem 0;
 
     padding: 12px 24px;
     border: 1px solid rgba(255,255,255,0.6);
