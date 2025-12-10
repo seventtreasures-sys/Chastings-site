@@ -9,9 +9,7 @@
   <body>
     <div class="main-container">
       <div class="card-container">
-        <div class="top-controls">
-            <a href="index.html" class="back-button">Back</a>
-            </div>
+        <div id="navbar"></div>
         <h1 class="title">Guild Information (IC & OOC)</h1>
         <h2 class="subtitle">
           A Summons to Service: The Barony of Chastings Seeks Loyal Hearts
@@ -22,38 +20,38 @@
 
         <p>
           Hear ye, citizens, artisans, and brave souls throughout the kingdoms!
-          <br>
-          <br>
+          <br />
+          <br />
           The ancient Barony of Chastings has risen from the shadow of the
           Scourge. We have reclaimed our ancestral lands and initiated the grand
           effort to restore this Valley to its former glory—and surpass it.
         </p>
-<br>
+        <br />
         <p>
           We seek skilled, loyal, and discreet individuals to join our ranks and
           secure the future of our domain. Chastings is not merely a territory;
           it is a bastion of Lordaeronian history and a cradle for a new,
           powerful future.
         </p>
-<div class="image-wrapper">
-    <img src="Images/7.png" alt="Hartchorde Castle">
-            </div>
+        <div class="image-wrapper">
+          <img src="Images/7.png" alt="Hartchorde Castle" />
+        </div>
         <h3>The Mission: Securing the Rebirth</h3>
         <p>
           Chastings Valley requires aid on all fronts. Your duty, should you
           pledge to the Baron, will encompass two vital areas:
         </p>
-<br>
-        <p><span class="emphasis">
-          Restoration & Prosperity</span>: We need hands to rebuild, minds to organize,
-          and innovation to thrive.
+        <br />
+        <p>
+          <span class="emphasis"> Restoration & Prosperity</span>: We need hands
+          to rebuild, minds to organize, and innovation to thrive.
         </p>
 
-        <p><span class="emphasis">
-          Defense and Security</span> The political landscape is treacherous, and the
-          wilderness is often hostile. We require stout defenses against those
-          who would invade our borders, be they political rivals or wartime
-          aggressors.
+        <p>
+          <span class="emphasis"> Defense and Security</span> The political
+          landscape is treacherous, and the wilderness is often hostile. We
+          require stout defenses against those who would invade our borders, be
+          they political rivals or wartime aggressors.
         </p>
 
         <h3>Open Call For All Professions and Skills</h3>
@@ -108,7 +106,7 @@
           skilled in the darker arts or bearing the taint of unconventional
           sacrifice may find a critical, if discreet, purpose within the Barony.
         </p>
-        <br>
+        <br />
         <ul class="staff-list">
           <li>
             Necromancers and Shadow Priests: Employed in controlled environments
@@ -140,22 +138,30 @@
 
         <p>
           To ensure the safety and stable future of our Valley, all prospective
-          citizens and agents must take this solemn oath:</p>
-          <br>
-          <p class="emphasis">You shall not, under
-          any circumstances, involve the resources or forces of Chastings Valley
-          in foreign or non-domestic conflicts.</p>
-        <p>Our focus is singular: The
-          security, restoration, and ultimate prosperity of Chastings and the
-          Hartchorde legacy.</p>
-          <p>We will not be drawn into the endless squabbles of
-          distant kingdoms. Our loyalty lies with our own walls. Those who
-          pledge themselves to this ideal are invited to present themselves at
-          the Hartchorde Gatehouse or contact Baron Hartchorde's Emissary in
-          Saleswick to begin their path to service.</p>
-          <p><strong>The time for mere survival
-          is over. The time for the restoration of true power is now.
-        </strong></p>
+          citizens and agents must take this solemn oath:
+        </p>
+        <br />
+        <p class="emphasis">
+          You shall not, under any circumstances, involve the resources or
+          forces of Chastings Valley in foreign or non-domestic conflicts.
+        </p>
+        <p>
+          Our focus is singular: The security, restoration, and ultimate
+          prosperity of Chastings and the Hartchorde legacy.
+        </p>
+        <p>
+          We will not be drawn into the endless squabbles of distant kingdoms.
+          Our loyalty lies with our own walls. Those who pledge themselves to
+          this ideal are invited to present themselves at the Hartchorde
+          Gatehouse or contact Baron Hartchorde's Emissary in Saleswick to begin
+          their path to service.
+        </p>
+        <p>
+          <strong
+            >The time for mere survival is over. The time for the restoration of
+            true power is now.
+          </strong>
+        </p>
 
         <h1><center>✧ ✧ ✧ ✧</center></h1>
 
@@ -197,9 +203,14 @@
             territories.
           </li>
         </ul>
-
-        <a href="index.html" class="card-button">Back</a>
       </div>
     </div>
+    <script>
+      fetch("nav.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar").innerHTML = html;
+        });
+    </script>
   </body>
 </html>
