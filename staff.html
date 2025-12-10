@@ -9,9 +9,7 @@
   <body>
     <div class="main-container">
       <div class="card-container">
-        <div class="top-controls">
-            <a href="index.html" class="back-button">Back</a>
-            </div>
+        <div id="navbar"></div>
         <h1 class="title">The Hartchorde Family: Custodians of the Valley</h1>
         <p class="description">
           The living and the undead of the Harthchorde lineage are dedicated to
@@ -22,7 +20,6 @@
         </div>
 
         <table class="character-table">
-        
           <thead>
             <tr>
               <th>Family Member</th>
@@ -225,12 +222,14 @@
             himself.
           </p>
         </div>
-
-        <a
-          href="index.html"
-          class="back-button"
-          >Back</a>
       </div>
     </div>
+    <script>
+      fetch("nav.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar").innerHTML = html;
+        });
+    </script>
   </body>
 </html>
